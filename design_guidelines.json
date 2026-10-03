@@ -1,0 +1,158 @@
+{
+  "app_name": "School Student & Admin App",
+  "personality": "4 Tactile / Playful LIGHT",
+  "personality_one_liner": "A bright, friendly, and structured educational space that feels welcoming for students while staying highly functional for admins.",
+  "color": {
+    "surface": "#f0eeee",
+    "onSurface": "#2D2420",
+    "surfaceSecondary": "#FFFFFF",
+    "onSurfaceSecondary": "#2D2420",
+    "surfaceTertiary": "#FFFFFF",
+    "onSurfaceTertiary": "#2D2420",
+    "surfaceInverse": "#2D2420",
+    "onSurfaceInverse": "#FFFFFF",
+    "brand": "#047450",
+    "brandPrimary": "#047450",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#A7F3D0",
+    "onBrandSecondary": "#2D2420",
+    "brandTertiary": "#FFFFFF",
+    "onBrandTertiary": "#2D2420",
+    "success": "#5EBA7D",
+    "onSuccess": "#FFFFFF",
+    "warning": "#FFC247",
+    "onWarning": "#2D2420",
+    "error": "#EF6C65",
+    "onError": "#FFFFFF",
+    "info": "#50B4E6",
+    "onInfo": "#FFFFFF",
+    "border": "#e5e5e5",
+    "borderStrong": "#e5e5e5",
+    "divider": "#e5e5e5",
+    "muted": "#8C7C75",
+    "onBrand": "#FFFFFF"
+  },
+  "typography": {
+    "displayFontFamily": "Nunito",
+    "textFontFamily": "Figtree",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous tactile padding. Use md/lg spacing between cards. Group items visibly with spacing rather than just borders.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 6,
+    "md": 12,
+    "lg": 20,
+    "pill": 999
+  },
+  "shadow_tier": 2,
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": false,
+    "do's": [
+      "Use only if absolutely necessary for sticky headers over scrolling content"
+    ],
+    "dont's": [
+      "Do not use glass on cards, inputs, or general UI. Keep it tactile and solid."
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Auth (Login / Register)",
+      "purpose": "Role-based entry (Student/Admin) with Email or Google login.",
+      "states": {
+        "loading": "Centered brand-colored spinner.",
+        "empty": "N/A",
+        "error": "Soft red warning toast or text below input."
+      },
+      "layout": "Playful illustration at the top. Friendly rounded input fields (surfaceTertiary background). Large pill-shaped primary button. Clear Google social login button with icon. English/Hindi toggle at top right."
+    },
+    {
+      "name": "Student Home Dashboard",
+      "purpose": "Primary landing showing 30 modules categorized into easy-to-scan groups.",
+      "states": {
+        "loading": "Skeleton of the hero card and grid items.",
+        "empty": "N/A",
+        "error": "Unable to load dashboard, Retry button."
+      },
+      "layout": "Header: Student Avatar, 'Hi, Student!', Notifications, and Language Toggle. Top Section: 'Hero' card with a playful abstract background and a daily summary (e.g., Attendance or next Live Class). Main Grid: Instead of 30 overwhelming icons, categorize them. Sections: 'Quick Tasks' (Homework, Live Class, Exams), 'Academics' (Syllabus, Time Table, Teachers, Library), 'School Updates' (Circulars, Events, News), 'My Account' (Fees, Leaves, Messages, Profile). Use a 2-column rounded card grid. Each card has a `brandTertiary` icon container."
+    },
+    {
+      "name": "Admin Dashboard",
+      "purpose": "CMS hub for the admin to manage all 30 modules.",
+      "states": {
+        "loading": "Grid skeleton.",
+        "empty": "N/A",
+        "error": "Error loading CMS modules."
+      },
+      "layout": "Header: Admin Avatar, 'Admin Portal'. Top row: Key stats (Total Students, Active Classes, Pending Leaves). Below: Grid of CMS management modules mirroring the student categories. Emphasize actionability (Create/Edit/Delete)."
+    },
+    {
+      "name": "Module Detail Sheet (e.g., Leave Request / Fee Payment)",
+      "purpose": "Drill-down view for specific interactions without leaving the context.",
+      "states": {
+        "loading": "Skeleton form/list.",
+        "empty": "Cute empty box illustration + 'No requests yet' text.",
+        "error": "Failed to load data, Retry."
+      },
+      "layout": "Uses @gorhom/bottom-sheet for quick tasks (Leaves, Fee preview, Notifications) to keep it lightweight. Header with module title and close icon. Form fields are tactile and chunky. Sticky primary action button at the bottom."
+    }
+  ],
+  "images": {
+    "auth_hero": {
+      "url": "https://images.unsplash.com/photo-1789016927971-51117e754ae5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxzY2hvb2wlMjBraWRzJTIwbGVhcm5pbmclMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzkwOTI3MTM5fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Preschool classroom showing playful kids learning environment"
+    },
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1617957718614-8c23f060c2d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwcGVhY2glMjBvcmFuZ2UlMjBncmFkaWVudCUyMGFic3RyYWN0JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3OTA5MjcxNTB8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Soft peach orange gradient abstract background"
+    },
+    "empty_state": {
+      "url": "https://images.unsplash.com/photo-1677753669131-f97ab3899faa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxjdXRlJTIwZW1wdHklMjBib3glMjBmb2xkZXIlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzkwOTI3MTUwfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Cute origami box illustration for empty states"
+    },
+    "admin_dashboard_hero": {
+      "url": "https://images.unsplash.com/photo-1763718432504-7716caff6e99?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwyfHx0ZWFjaGVyJTIwYWRtaW4lMjBkYXNoYm9hcmQlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzkwOTI3MTM5fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Admin dashboard summary layout"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Follow '4 Tactile / Playful LIGHT' strictly: use chunky rounded elements, pill-shaped buttons, and generous padding.",
+    "Colors: Use the defined green/mint palette. Base app background is light gray (#f0eeee), with tiles and secondary surfaces in white (#FFFFFF). Use light gray borders (#e5e5e5). Primary accent is #047450. Use brandTertiary (#FFFFFF) as the background for icons inside cards.",
+    "Typography: Use Nunito (Display) for headers/titles and Figtree for body/text. Keep weights <= 500.",
+    "Layout for 30 Modules: DO NOT just list 30 icons in a flat grid. Chunk them into logical categories (Academics, Tasks, Communication, School Updates, Account) with section headers. Use a 2-column or 3-column masonry/grid for these cards.",
+    "Cards: Cards must have shadow_tier 2, radius lg (20), and a tactile feel.",
+    "Forms & Bottom Sheets: Use bottom sheets for detail views (e.g., Leave Request) to avoid breaking context. Inputs should have surfaceTertiary background and no borders.",
+    "Language Toggle: Add a simple English/Hindi toggle button (e.g., an 'A/अ' icon) in the header of both Auth and Dashboard screens.",
+    "Ensure the hero card on the Student Dashboard uses the 'hero_background' gradient image with a text scrim (vertical linear gradient) so the text is fully readable.",
+    "Never use blue/purple/indigo colors. Stick to the warm peach/orange/ink palette.",
+    "Remember to build both Student and Admin views within the same app."
+  ]
+}
